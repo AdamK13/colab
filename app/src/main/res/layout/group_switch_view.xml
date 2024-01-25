@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frameGroupSwitchButtonTemplate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="10dp"
+    android:background="@color/transparent"
+    android:clickable="false">
+
+    <TextView
+        android:id="@+id/textViewGroupSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/background_rounded_fill"
+        android:backgroundTint="@color/teal_light"
+        android:clickable="true"
+        android:fontFamily="@font/josefinsans_semibolditalic"
+        android:gravity="center|center_vertical"
+        android:includeFontPadding="false"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="9dp"
+        android:paddingBottom="5dp"
+        android:text="@string/example_group"
+        android:textColor="@color/text_dark"
+        android:textSize="20sp" />
+
+</FrameLayout>

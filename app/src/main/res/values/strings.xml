@@ -1,0 +1,202 @@
+<resources>
+    <string name="app_name">Colab</string>
+    <string name="sign_in">Sign in</string>
+    <string name="register">Register</string>
+    <string name="email">Email address</string>
+    <string name="password">Password</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="name">Name / Nickname</string>
+    <string name="returnDesc">Return</string>
+    <string name="messages">Messages</string>
+    <string name="calendar">Calendar</string>
+    <string name="projects">Projects</string>
+    <string name="offline_mode">App running in offline mode</string>
+    <string name="placeholder_username" translatable="false">Username</string>
+    <string name="placeholder_date" translatable="false">17.05.2022</string>
+    <string name="placeholder_time" translatable="false">14:07</string>
+    <string name="placeholder_message" translatable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sollicitudin tempor odio ac ornare. Nulla sagittis erat in ante volutpat, ac aliquam turpis malesuada. Proin interdum vestibulum massa, quis tempor. Maecenas sollicitudin tempor odio ac ornare.</string>
+    <string name="apply">Apply</string>
+    <string name="example_group">Group</string>
+    <string name="reset_password">Reset password</string>
+    <string name="email_error">Enter a valid email</string>
+    <string name="name_error">Name must have 3 – 23 characters, letters and numbers only</string>
+    <string name="name_taken">This name is unavailable</string>
+    <string name="pass_error">Password must be at least 8 characters long</string>
+    <string name="repeat_error">Passwords do not match</string>
+    <string name="reset_password_confirmation">If account exists, reset password link will be sent to given email</string>
+    <string name="registration_success">Registered successfully! \n Sending email verification link…</string>
+    <string name="verify_email">Verify email before signing in</string>
+    <string name="setup_prompt">Join or create a group</string>
+    <string name="join_group">Join</string>
+    <string name="create_group">Create</string>
+    <string name="button_continue">Continue</string>
+    <string name="join_group_prompt">Enter the group name</string>
+    <string name="join_group_password_prompt">Enter the group password</string>
+    <string name="join_group_password_required">This group requires a password</string>
+    <string name="password_wrong">Wrong password</string>
+    <string name="group_does_not_exist">Group with this name does not exist</string>
+    <string name="create_group_prompt">Enter your group name</string>
+    <string name="create_group_password_prompt">Choose a password for your group</string>
+    <string name="create_group_password_info">You will be able to turn off the password requirement later</string>
+    <string name="group_password_hint">Group password</string>
+    <string name="group_name_hint">Group name</string>
+    <string name="group_name_unavailable">This group name is unavailable</string>
+    <string name="invalid_group_name">Invalid group name!\n Only letters and numbers\n 3–10 characters</string>
+    <string name="invalid_group_password">Group password should consist of at least 6 characters</string>
+    <string name="message_prompt">Message</string>
+    <string name="message_send_button">Send message</string>
+    <string name="message_content_hint">Type here</string>
+    <string name="admin_panel_members">Group members</string>
+    <string name="admin_panel_general_group_settings">General group settings</string>
+    <string name="admin_panel_lock_group">Unlock / Lock group</string>
+    <string name="admin_panel_unlocked_group_info">The group is unlocked, users can join it openly</string>
+    <string name="admin_panel_locked_group_info">The group is locked, joining users will need to enter the group password</string>
+    <string name="admin_panel_writing_permissions">Open conversation / Owner only</string>
+    <string name="admin_panel_writing_open_info">The group is in open conversation mode.\nAll members can write messages and create events or projects</string>
+    <string name="admin_panel_writing_closed_info">The group is in owner only mode.\nOnly you can write messages and create events or projects</string>
+    <string name="admin_panel_member_usernameplaceholder" translatable="false">Username</string>
+    <string name="admin_panel_member_emailplaceholder" translatable="false">email@domain.com</string>
+    <string name="something_went_wrong">Something went wrong\nTry restarting the app</string>
+    <string name="warning_unlocking_group">If you unlock the group, anyone that knows its name will be able to join it</string>
+    <string name="warning_locking_group">If you lock the group, users will need to enter the group password to join it</string>
+    <string name="locking_group_success">This group is now locked</string>
+    <string name="locking_group_failure">Internal error or unauthorized user!</string>
+    <string name="unlocking_group_success">This group is now unlocked</string>
+    <string name="unlocking_group_failure">Internal error or unauthorized user!</string>
+    <string name="admin_panel_group_password">Group password:</string>
+    <string name="warning_changing_password">New members will need to enter this password on joining: \n\n %1$s</string>
+    <string name="password_change_success">Group password has been changed</string>
+    <string name="password_change_failure">Changing password failed</string>
+    <string name="change">Change</string>
+    <string name="randomize">Random</string>
+    <string name="unlock_button">UNLOCK</string>
+    <string name="cancel_button">CANCEL</string>
+    <string name="lock_button">LOCK</string>
+    <string name="warning_opening_conversation">If you change the conversation mode to open, any member of the group will be able to write messages and create events or projects</string>
+    <string name="warning_closing_conversation">If you change the conversation mode to owner only, members of the group will not be able to write messages and create events or projects</string>
+    <string name="opening_conversation_success">Conversation is now open</string>
+    <string name="opening_conversation_failure">Internal error or unauthorized user!</string>
+    <string name="closing_conversation_success">Conversation is now in owner only mode</string>
+    <string name="closing_conversation_failure">Internal error or unauthorized user!</string>
+    <string name="choose_different_password">Enter a different password to change it</string>
+    <string name="open_conversation_button">OPEN</string>
+    <string name="close_conversation_button">OWNER ONLY</string>
+    <string name="no_groups_available">You don\'t belong to any active groups</string>
+    <string name="member_removed">Member removed</string>
+    <string name="failed_to_remove_member">Failed to remove member!</string>
+
+
+    <string name="sending_message">Sending message…</string>
+    <string name="sending_message_length_error">Message length should be between 2 and 500 characters</string>
+    <string name="sending_message_successful">Message sent!</string>
+    <string name="sending_message_failure">Failed to send message.</string>
+
+    <string name="new_event_prompt">New Event</string>
+
+    <string name="creating_event">Creating event…</string>
+    <string name="creating_event_successful">Event created!</string>
+    <string name="creating_event_failure">Failed to create event.</string>
+
+    <string name="monday">MO</string>
+    <string name="tuesday">TU</string>
+    <string name="wednesday">WE</string>
+    <string name="thursday">TH</string>
+    <string name="friday">FR</string>
+    <string name="saturday">SA</string>
+    <string name="sunday">SU</string>
+
+    <string name="month0">January</string>
+    <string name="month1">February</string>
+    <string name="month2">March</string>
+    <string name="month3">April</string>
+    <string name="month4">May</string>
+    <string name="month5">June</string>
+    <string name="month6">July</string>
+    <string name="month7">August</string>
+    <string name="month8">September</string>
+    <string name="month9">October</string>
+    <string name="month10">November</string>
+    <string name="month11">December</string>
+
+    <string name="all_events">All events</string>
+
+    <string name="create_event_top_info">Creating event on %1$s</string>
+    <string name="create_event_time_input_prompt">Time</string>
+    <string name="create_event_title_input_prompt">Title</string>
+    <string name="create_event_description_input_prompt">Description</string>
+    <string name="create_event_button_create">CREATE</string>
+    <string name="today">Today</string>
+
+
+    <string name="creating_project">Creating project…</string>
+    <string name="creating_project_successful">Project created!</string>
+    <string name="creating_project_failure">Failed to create project.</string>
+
+    <string name="project_creating_info">New project</string>
+    <string name="project_creating_title_hint">Project title</string>
+    <string name="project_creating_description_hint">Project details and description…</string>
+    <string name="project_creating_edit_members">Choose project members:</string>
+    <string name="project_members">Project members:</string>
+    <string name="project_description">Description</string>
+    <string name="project_title">Title:</string>
+    <string name="project_deadline" translatable="false">Deadline:</string>
+    <string name="description_placeholder" translatable="false">     The app allows users to track their workouts, calories, and goals. The UML diagram consists of four main components: \n - the use case diagram \n - the class diagram \n - the sequence diagram \n - the state diagram \n The use case diagram shows the interactions between the users and the system. The class diagram shows the structure and relationships of the classes in the app. The sequence diagram shows the order of messages exchanged between the objects in the app The sequence diagram shows the order of messages exchanged between the objects in the app The sequence diagram shows the order of messages exchanged between the objects in the app The sequence diagram shows the order of messages exchanged between the objects in the app</string>
+    <string name="project_creating_error_title">Title length should be between 3 and 35 characters</string>
+    <string name="project_creating_error_description">Description length should be between 20 and 750 characters</string>
+    <string name="project_creating_error_no_members">Could not retrieve group members</string>
+    <string name="project_choose_project_members">Choose project members</string>
+    <string name="project_deleting_warning">Marking this project as done will delete it!</string>
+    <string name="project_delete_button">DELETE</string>
+
+    <string name="click_to_add_event">Click to create event \non the selected day</string>
+    <string name="hint_create_event_time" translatable="false">HH:mm</string>
+    <string name="hint_create_event_title">Event Title</string>
+    <string name="hint_create_event_desc">Event description…</string>
+
+    <string name="error_event_creation_time_input">Time should be in 24h format.\nExample: 21:30</string>
+    <string name="error_event_creation_title_input">Title should be between 4 and 40 characters long</string>
+    <string name="error_event_creation_desc_input">Description should be between 5 and 500 characters long</string>
+
+    <string name="placeholder_time24h" translatable="false">21:45</string>
+    <string name="placeholder_title" translatable="false">Meeting on Teams!</string>
+    <string name="placeholder_description" translatable="false">Description.</string>
+    <string name="placeholder_day_of_month" translatable="false">Month Nth</string>
+    <string name="placeholder_name" translatable="false">Name</string>
+
+    <string name="switch_group_info">Switch group</string>
+    <string name="no_other_groups_info">You don\'t belong to any other groups</string>
+
+    <string name="no_internet">No internet connection!</string>
+
+    <string name="settings">Settings</string>
+    <string name="user_settings">User settings</string>
+    <string name="app_settings">App</string>
+    <string name="reset_app">RESET APP</string>
+    <string name="reset_app_info">Try resetting the app if you\'re experiencing problems</string>
+    <string name="groups">Groups</string>
+    <string name="your_groups">Your groups</string>
+    <string name="account">Account</string>
+    <string name="change_password">CHANGE PASSWORD</string>
+    <string name="changing_password_info">Changing account password</string>
+    <string name="changing_password_old_password">Current password:</string>
+    <string name="changing_password_new_password">New password:</string>
+    <string name="changing_password_no_current_error">Enter your current password</string>
+    <string name="password_length_error">Password should consist of at least 8 characters</string>
+    <string name="new_password_same_as_old_error">New password should be different than the old password</string>
+    <string name="changing_password_success">Password changed!</string>
+    <string name="join_or_create">JOIN OR CREATE</string>
+    <string name="logout">LOGOUT</string>
+    <string name="leave">LEAVE</string>
+    <string name="leave_group_warning_info">Are you sure you want to leave group \"%1$s\"?</string>
+    <string name="left_group_info">Left group "%1$s"</string>
+    <string name="delete">DELETE</string>
+    <string name="delete_group_warning_info">Are you sure you want to delete group \"%1$s\"?\nThis action is irreversible!</string>
+    <string name="deleted_group_info">Deleted group "%1$s"</string>
+    <string name="join_create_another_group">Join or create a new group</string>
+    <string name="delete_account">DELETE ACCOUNT</string>
+    <string name="delete_account_info">This action is irreversible!</string>
+    <string name="delete_account_warning_info">Are you sure you want to delete your Colab account?\nThis action is irreversible!\nAll your groups will be deleted.\n\nEnter your current account password to delete your account</string>
+    <string name="delete_account_warning">Enter your password to delete your account</string>
+    <string name="goodbye">Goodbye!</string>
+
+</resources>

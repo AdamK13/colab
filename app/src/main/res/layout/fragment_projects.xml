@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/baseLayoutProjectsFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".app.ProjectsFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCreatingProjectHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_rounded_fill"
+        android:backgroundTint="@color/teal_darkest"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textViewCreatingProjectInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/josefinsans_regular"
+            android:gravity="center"
+            android:text="@string/project_creating_info"
+            android:textColor="@color/teal_darker"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/layoutProjectCreatingTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_weight="0.5"
+                android:fontFamily="@font/josefinsans_medium"
+                android:gravity="center"
+                android:text="@string/project_title"
+                android:textColor="@color/teal_dark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/editTextCreatingProjectTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_rounded_fill"
+                android:backgroundTint="@color/text_dark"
+                android:ems="10"
+                android:fontFamily="@font/josefinsans_regular"
+                android:hint="@string/project_creating_title_hint"
+                android:inputType="text"
+                android:maxLength="35"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="7dp"
+                android:textColor="@color/teal_light"
+                android:textColorHint="@color/text_grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutProjectCreatingMembers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewCreatingMembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_weight="0.5"
+                android:fontFamily="@font/josefinsans_medium"
+                android:gravity="center"
+                android:text="@string/project_creating_edit_members"
+                android:textColor="@color/teal_dark"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/imageButtonCreatingEditMembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_rounded_fill"
+                android:backgroundTint="@color/text_dark"
+                android:src="@drawable/groups_40px"
+                app:tint="@color/teal_light" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewProjectCreatingDescriptionInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/josefinsans_medium"
+            android:gravity="center"
+            android:text="@string/project_description"
+            android:textColor="@color/teal_dark"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/editTextCreatingProjectDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_rounded_fill"
+            android:backgroundTint="@color/text_dark"
+            android:ems="10"
+            android:fontFamily="@font/josefinsans_regular"
+            android:gravity="start|top"
+            android:hint="@string/project_creating_description_hint"
+            android:inputType="textMultiLine"
+            android:lineSpacingExtra="2sp"
+            android:maxLength="750"
+            android:minHeight="170dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:textColor="@color/teal_light"
+            android:textColorHint="@color/text_grey" />
+
+        <LinearLayout
+            android:id="@+id/layoutProjectCreatingButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|end"
+            android:minHeight="50dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButtonCreatingProjectCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/background_rounded_fill"
+                android:backgroundTint="@color/text_dark"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="2dp"
+                app:srcCompat="@drawable/close_40px"
+                app:tint="@color/error_red" />
+
+            <ImageButton
+                android:id="@+id/imageButtonCreatingProjectDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginVertical="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/background_rounded_fill"
+                android:backgroundTint="@color/text_dark"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="2dp"
+                android:src="@drawable/done_40px"
+                app:tint="@color/confirmation_green" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewProjectsHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutProjectsHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="false"
+            android:orientation="vertical"
+            android:paddingTop="45dp"
+            android:paddingBottom="60dp"></LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/imageButtonProjectsCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_rounded_fill"
+        android:backgroundTint="@color/text_dark"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
+        android:src="@drawable/edit_note_40px"
+        app:tint="@color/teal_light" />
+</FrameLayout>

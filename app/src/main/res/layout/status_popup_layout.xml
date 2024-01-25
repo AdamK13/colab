@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:layout_margin="10dp"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/background_rounded_fill"
+    android:backgroundTint="@color/text_dark"
+    android:minHeight="35dp"
+    android:paddingHorizontal="15dp">
+
+    <TextView
+        android:id="@+id/textViewStatusInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp"
+        android:layout_weight="6"
+        android:fontFamily="@font/josefinsans_regular"
+        android:foregroundGravity="center"
+        android:maxLines="1"
+        android:text="TextView"
+        android:textColor="@color/teal_dark"
+        android:textSize="16sp" />
+
+    <ProgressBar
+        android:id="@+id/progressBarStatus"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:foregroundGravity="center"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/teal_dark"
+        android:maxWidth="30dp"
+        android:maxHeight="30dp"
+        android:minWidth="15dp"
+        android:minHeight="15dp"
+        android:visibility="visible" />
+</LinearLayout>

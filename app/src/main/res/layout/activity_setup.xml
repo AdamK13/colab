@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintSetup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.SetupActivity">
+
+    <ImageButton
+        android:id="@+id/imageButtonSetupReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:background="@color/transparent"
+        android:paddingHorizontal="10dp"
+        android:src="@drawable/settings_30px"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toEndOf="@+id/textViewSetupAppName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/teal_light"
+        tools:src="@drawable/settings_30px" />
+
+    <TextView
+        android:id="@+id/textViewSetupAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/josefinsans_bolditalic"
+        android:text="@string/app_name"
+        android:textColor="@color/teal_dark"
+        android:textSize="26sp"
+        android:transitionName="appNameTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewSetupActivityPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"
+        android:fontFamily="@font/josefinsans_regular"
+        android:text="@string/setup_prompt"
+        android:textAllCaps="false"
+        android:textColor="@color/teal_light"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutSetupButtons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutSetupButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/buttonSetupJoin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/background_rounded_fill"
+            android:backgroundTint="@color/teal_dark"
+            android:elegantTextHeight="true"
+            android:fontFamily="@font/josefinsans_bold"
+            android:minWidth="150dip"
+            android:text="@string/join_group"
+            android:textAlignment="center"
+            android:textColor="@color/text_grey" />
+
+        <Button
+            android:id="@+id/buttonSetupCreate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/background_rounded_border"
+            android:backgroundTint="@color/teal_dark"
+            android:elegantTextHeight="true"
+            android:fontFamily="@font/josefinsans_bold"
+            android:text="@string/create_group"
+            android:textAlignment="center"
+            android:textColor="@color/teal_light" />
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerViewSetup"
+        android:name="kocot.klass.app.SetupFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSetupAppName" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginBottom="15dp"
+    android:background="@drawable/background_rounded_fill"
+    android:backgroundTint="@color/teal_darkest"
+    android:orientation="vertical"
+    android:paddingBottom="5dp">
+
+    <TextView
+        android:id="@+id/textViewProjectTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/background_rounded_top_fill"
+        android:backgroundTint="@color/teal_black"
+        android:fontFamily="@font/josefinsans_semibold"
+        android:gravity="center"
+        android:paddingVertical="5dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="TextView"
+        android:textColor="@color/teal_light"
+        android:textSize="20sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:paddingHorizontal="15dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutProjectDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewProjectDescriptionPrompt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/josefinsans_regular"
+                android:text="@string/project_description"
+                android:textColor="@color/teal_darker" />
+
+            <TextView
+                android:id="@+id/textViewProjectDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/josefinsans_regular"
+                android:lineSpacingExtra="2sp"
+                android:text="@string/description_placeholder"
+                android:textColor="@color/teal_light"
+                android:textIsSelectable="true"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="5dp"
+        android:background="@drawable/background_rounded_fill"
+        android:backgroundTint="@color/teal_light_semi_transparent"
+        android:orientation="vertical"
+        android:paddingVertical="5dp">
+
+        <TextView
+            android:id="@+id/textViewProjectMembersPrompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/josefinsans_italic"
+            android:text="@string/project_members"
+            android:textColor="@color/teal_dark" />
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutProjectMembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButtonProjectMembers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/background_rounded_border_fill"
+            android:backgroundTint="@color/text_dark"
+            android:paddingHorizontal="15dp"
+            android:src="@drawable/groups_40px"
+            app:tint="@color/teal_darker" />
+
+        <ImageButton
+            android:id="@+id/imageButtonProjectDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rounded_border_fill"
+            android:backgroundTint="@color/text_dark"
+            android:paddingHorizontal="15dp"
+            android:src="@drawable/done_all_40px"
+            app:tint="@color/teal_darker" />
+    </LinearLayout>
+
+</LinearLayout>

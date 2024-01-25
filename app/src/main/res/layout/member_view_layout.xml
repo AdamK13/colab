@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayoutMemberViewBase"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/background_rounded_fill"
+    android:backgroundTint="@color/teal_darker"
+    android:paddingStart="20dp"
+    android:paddingTop="10dp"
+    android:paddingEnd="20dp"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewMemberViewUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/josefinsans_semibold"
+            android:text="@string/admin_panel_member_usernameplaceholder"
+            android:textColor="@color/text_dark"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textViewMemberViewUID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/josefinsans_mediumitalic"
+            android:text="UID"
+            android:textAllCaps="true"
+            android:textColor="@color/gray_background" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButtonMemberViewRemove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        app:srcCompat="@drawable/person_remove40px"
+        app:tint="@color/text_dark" />
+
+    <ProgressBar
+        android:id="@+id/progressBarMemberView"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/text_grey"
+        android:visibility="gone" />
+</LinearLayout>

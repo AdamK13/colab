@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/baseMainActivityLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_grey"
+    android:orientation="vertical"
+    tools:context=".app.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/toolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_rounded_bottom"
+        android:backgroundTint="@color/text_dark"
+        android:orientation="horizontal"
+        android:transitionName="toolbarLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButtonToolbarSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0"
+            android:background="@color/transparent"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            app:srcCompat="@drawable/settings_30px"
+            app:tint="@color/teal_light" />
+
+        <TextView
+            android:id="@+id/textViewToolbarAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="6dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/josefinsans_bolditalic"
+            android:text="@string/app_name"
+            android:textColor="@color/teal_light"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/imageButtonAdminSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0"
+            android:background="@color/transparent"
+            android:foregroundGravity="center"
+            android:padding="3dp"
+            android:visibility="visible"
+            app:srcCompat="@drawable/build_circle24px" />
+
+        <TextView
+            android:id="@+id/textViewToolbarGroupName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginVertical="6dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="0"
+            android:background="@drawable/background_rounded_border_thin"
+            android:backgroundTint="@color/teal_light"
+            android:clickable="true"
+            android:fontFamily="@font/josefinsans_semibolditalic"
+            android:gravity="center|center_vertical"
+            android:includeFontPadding="false"
+            android:paddingHorizontal="10dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="3dp"
+            android:text="@string/example_group"
+            android:textColor="@color/teal_light"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarLayout" />
+
+    <LinearLayout
+        android:id="@+id/chipButtonLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="3dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:isScrollContainer="false"
+        android:orientation="horizontal"
+        android:persistentDrawingCache="all"
+        android:transitionName="chipButtonLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarLayout">
+
+        <Button
+            android:id="@+id/chipButtonMessages"
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/background_rounded_border_fill"
+            android:fontFamily="@font/josefinsans_semibold"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:isScrollContainer="false"
+            android:singleLine="true"
+            android:text="@string/messages"
+            android:textAllCaps="false"
+            android:textColor="@color/teal_light"
+            android:textIsSelectable="false"
+            android:textSize="18sp"
+            app:iconPadding="0dp" />
+
+        <Button
+            android:id="@+id/chipButtonCalendar"
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_rounded_border_fill"
+            android:fontFamily="@font/josefinsans_semibold"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:isScrollContainer="false"
+            android:singleLine="true"
+            android:text="@string/calendar"
+            android:textAllCaps="false"
+            android:textColor="@color/teal_light"
+            android:textIsSelectable="false"
+            android:textSize="18sp"
+            app:iconPadding="0dp" />
+
+        <Button
+            android:id="@+id/chipButtonProjects"
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/background_rounded_border_fill"
+            android:fontFamily="@font/josefinsans_semibold"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:isScrollContainer="false"
+            android:singleLine="true"
+            android:text="@string/projects"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/teal_light"
+            android:textIsSelectable="false"
+            android:textSize="18sp"
+            app:iconPadding="0dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayoutMessageBase"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/background_rounded_fill"
+    android:backgroundTint="@color/teal_darkest"
+    android:minHeight="100dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMessageTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewMessageUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/background_rounded_border_thin"
+            android:backgroundTint="@color/teal_light_semi_transparent"
+            android:fontFamily="@font/josefinsans_semibolditalic"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="2dp"
+            android:singleLine="true"
+            android:text="@string/placeholder_username"
+            android:textAllCaps="false"
+            android:textColor="@color/teal_dark"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutMessageDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewMessageDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefinsans_regular"
+                android:gravity="right|center_vertical"
+                android:singleLine="true"
+                android:text="@string/placeholder_date"
+                android:textColor="@color/teal_light"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textViewMessageTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefinsans_regular"
+                android:gravity="right|center_vertical"
+                android:singleLine="true"
+                android:text="@string/placeholder_time"
+                android:textColor="@color/teal_light"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewMessageContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/josefinsans_regular"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/placeholder_message"
+        android:textColor="@color/background_teal"
+        android:textSize="15sp" />
+</LinearLayout>

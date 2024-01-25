@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "101859791739",
+    "project_id": "klass-kocot",
+    "storage_bucket": "klass-kocot.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:101859791739:android:5b175e91a048b2f219a3de",
+        "android_client_info": {
+          "package_name": "kocot.klass"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "101859791739-ngoue9uo1bjo4cvg67r2ar44bacrtt05.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcry6w780k3FMIb2qDfYQ54Eqoh2y5AtA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "101859791739-ngoue9uo1bjo4cvg67r2ar44bacrtt05.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

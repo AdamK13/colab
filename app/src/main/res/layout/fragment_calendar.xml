@@ -1,0 +1,899 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/baseLayoutCalendarFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.CalendarFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="35dp"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutMonthSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButtonPreviousMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@color/transparent"
+                android:src="@drawable/chevron_left40px"
+                app:tint="@color/teal_light" />
+
+            <TextView
+                android:id="@+id/textViewMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/josefinsans_bold"
+                android:gravity="center"
+                android:text="Month"
+                android:textColor="@color/teal_light"
+                android:textSize="23sp" />
+
+            <ImageButton
+                android:id="@+id/imageButtonNextMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@color/transparent"
+                android:src="@drawable/chevron_right40px"
+                app:tint="@color/teal_light" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutYearSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="5dp"
+            android:animateLayoutChanges="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageButton
+                android:id="@+id/imageButtonPreviousYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_weight="2"
+                android:background="@color/transparent"
+                android:src="@drawable/chevron_left25px"
+                android:visibility="visible"
+                app:tint="@color/teal_dark" />
+
+            <TextView
+                android:id="@+id/textViewYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:fontFamily="@font/josefinsans_bold"
+                android:gravity="center"
+                android:text="Year"
+                android:textColor="@color/teal_dark"
+                android:textSize="17sp" />
+
+            <ImageButton
+                android:id="@+id/imageButtonNextYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="60dp"
+                android:layout_weight="2"
+                android:background="@color/transparent"
+                android:src="@drawable/chevron_right25px"
+                android:visibility="visible"
+                app:tint="@color/teal_dark" />
+        </LinearLayout>
+
+        <TableLayout
+            android:id="@+id/calendarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="false">
+
+            <TableRow
+                android:id="@+id/rowDaysOfWeek"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_rounded_fill"
+                android:backgroundTint="@color/teal_light_semi_transparent"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewMon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/josefinsans_medium"
+                    android:gravity="center"
+                    android:text="@string/monday"
+                    android:textColor="@color/teal_dark" />
+
+                <TextView
+                    android:id="@+id/textViewTue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/josefinsans_medium"
+                    android:gravity="center"
+                    android:text="@string/tuesday"
+                    android:textColor="@color/teal_dark" />
+
+                <TextView
+                    android:id="@+id/textViewWed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/josefinsans_medium"
+                    android:gravity="center"
+                    android:text="@string/wednesday"
+                    android:textColor="@color/teal_dark" />
+
+                <TextView
+                    android:id="@+id/textViewThu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/josefinsans_medium"
+                    android:gravity="center"
+                    android:text="@string/thursday"
+                    android:textColor="@color/teal_dark" />
+
+                <TextView
+                    android:id="@+id/textViewFri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/josefinsans_medium"
+                    android:gravity="center"
+                    android:text="@string/friday"
+                    android:textColor="@color/teal_dark" />
+
+                <TextView
+                    android:id="@+id/textViewSat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/josefinsans_medium"
+                    android:gravity="center"
+                    android:text="@string/saturday"
+                    android:textColor="@color/teal_dark" />
+
+                <TextView
+                    android:id="@+id/textViewSun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/josefinsans_medium"
+                    android:gravity="center"
+                    android:text="@string/sunday"
+                    android:textColor="@color/teal_dark" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowDays1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:minHeight="40dp"
+                android:textAlignment="center">
+
+                <TextView
+                    android:id="@+id/textDay1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowDays2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:minHeight="40dp"
+                android:textAlignment="center">
+
+                <TextView
+                    android:id="@+id/textDay8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowDays3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:minHeight="40dp"
+                android:textAlignment="center">
+
+                <TextView
+                    android:id="@+id/textDay15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowDays4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:minHeight="40dp"
+                android:textAlignment="center">
+
+                <TextView
+                    android:id="@+id/textDay22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowDays5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:minHeight="40dp"
+                android:textAlignment="center">
+
+                <TextView
+                    android:id="@+id/textDay29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowDays6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:minHeight="40dp"
+                android:textAlignment="center">
+
+                <TextView
+                    android:id="@+id/textDay36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textDay42"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="N"
+                    android:textColor="@color/teal_light"
+                    android:textSize="19sp" />
+            </TableRow>
+        </TableLayout>
+
+        <View
+            android:id="@+id/dividerCalendarFragment"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="5dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="@color/teal_light" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButtonCreateEventOnDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/background_rounded_fill"
+                android:backgroundTint="@color/text_dark"
+                android:paddingHorizontal="10dp"
+                android:src="@drawable/add_40px"
+                app:tint="@color/teal_light" />
+
+            <TextView
+                android:id="@+id/textViewDayOfMonth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/josefinsans_regular"
+                android:gravity="center"
+                android:text="@string/all_events"
+                android:textColor="@color/teal_light"
+                android:textSize="17sp" />
+
+            <ImageButton
+                android:id="@+id/imageButtonExpandEvents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:minWidth="30dp"
+                android:paddingHorizontal="5dp"
+                android:src="@drawable/arrow_drop_up_40px"
+                app:tint="@color/teal_light" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewEvents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</FrameLayout>

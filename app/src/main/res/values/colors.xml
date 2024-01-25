@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gray_background">#575655</color>
+    <color name="teal_sharp">#7bc200</color>
+    <color name="teal_light">#b7c2a4</color>
+    <color name="teal_light_semi_transparent">#1Ab7c2a4</color>
+    <color name="background_teal">#d1d8c5</color>
+    <color name="teal_dark">#9dad9d</color>
+    <color name="teal_darker">#829782</color>
+    <color name="teal_darkest">#3f453f</color>
+    <color name="teal_black">#2c302c</color>
+    <color name="text_grey">#383838</color>
+    <color name="text_dark">#262626</color>
+    <color name="cream_background">#f2f4ee</color>
+    <color name="semitransparent_cream_background">#CCf2f4ee</color>
+    <color name="transparent">#00000000</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="confirmation_green">#6A994E</color>
+    <color name="selected_green">#425f30</color>
+    <color name="error_red">#F25C54</color>
+
+    <color name="testing">#453F45</color>
+</resources>

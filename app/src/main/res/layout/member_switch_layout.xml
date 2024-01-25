@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.SwitchCompat
+
+        android:id="@+id/switchMemberTemplate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/background_rounded_fill"
+        android:backgroundTint="@color/teal_light"
+        android:checked="false"
+        android:fontFamily="@font/josefinsans_regular"
+        android:paddingVertical="7dp"
+        android:paddingStart="25dp"
+        android:paddingEnd="20dp"
+        android:text="USERNAME"
+        android:textColor="@color/text_dark"
+        android:textSize="20sp">
+
+
+    </androidx.appcompat.widget.SwitchCompat>
+</LinearLayout>

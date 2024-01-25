@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:background="@drawable/background_rounded_border_fill"
+    android:orientation="vertical"
+    android:paddingHorizontal="15dp"
+    android:paddingVertical="10dp">
+
+    <TextView
+        android:id="@+id/textViewWarningPrompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/josefinsans_medium"
+        android:gravity="center"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:text="@string/project_deleting_warning"
+        android:textColor="@color/teal_light"
+        android:textSize="22sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="15dp">
+
+        <ProgressBar
+            android:id="@+id/progressBarDeletingProject"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/teal_darker"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/buttonCancelDeleting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/background_rounded_fill"
+            android:backgroundTint="@color/gray_background"
+            android:fontFamily="@font/josefinsans_bold"
+            android:text="@string/cancel_button"
+            android:textColor="@color/teal_dark"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/buttonDeleteProject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/background_rounded_fill"
+            android:backgroundTint="@color/teal_dark"
+            android:fontFamily="@font/josefinsans_bold"
+            android:text="@string/project_delete_button"
+            android:textColor="@color/text_dark"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>
